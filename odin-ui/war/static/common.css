@@ -1,0 +1,96 @@
+@import "flex.css";
+@import "dialog.css";
+@import "fa.min.css";
+
+body
+{
+	background-color: black;
+	
+	color: #cecece;
+	font-size: 1.3em;
+	font-family: Arial;
+	
+	overflow: hidden;
+}
+
+.background-image
+{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	background-image: url('background.jpg');
+	opacity: 0.5;
+}
+
+.scrolling
+{
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
+.button
+{
+	cursor: pointer;
+}
+
+.button.option
+{
+	background-color: #4a5d7461;
+	border-radius: 0.1em;
+	margin: 1em;
+	margin-right: 3em;
+	padding: 0.7em;
+	
+	font-weight: bold;
+	font-size: 0.75em;
+}
+
+.button.option.selected
+{
+	background-color: #0c4181;
+}
+
+.button.option.reset
+{
+	background-color: #7e10108a;
+    color: #8b8181;
+}
+
+.button.option.center
+{
+	text-align: center;
+}
+
+.button.option.left
+{
+	text-align: right;
+}
+
+.button.option.right
+{
+	text-align: left;
+}
+
+.stretched-x
+{
+	width: 100vw;
+}
+
+.stretched-y
+{
+	height: 100vh;
+}
+
+.chart-container
+{
+	min-width: 50vw;
+}
+
+.chart-bar
+{
+	min-width: 50vw;
+	max-height: 80vh;
+}

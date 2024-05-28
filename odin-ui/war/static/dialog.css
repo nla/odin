@@ -1,0 +1,69 @@
+.dialog-container
+{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+.dialog-container-stretch-w
+{
+	width: 100vw;
+}
+
+.dialog-container-stretch-h
+{
+	height: 100vh;
+}
+
+.dialog
+{
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	
+	max-width: 80vw;
+	max-height: 80vh;
+	min-width: 25vw;
+	min-height: 25vh;
+	
+	border: solid 1px gray;
+	box-shadow: 0.5em 0.5em 0.25em darkgray;
+}
+
+.dialog.dialog-error
+{
+	max-height: 4em;
+	min-height: 6em;
+	box-shadow: 0.5em 0.5em 0.25em #3c1a1a;
+}
+
+.dialog .dialog-content-panel
+{
+	display: flex;
+	flex-direction: column;
+	
+	flex-grow: 1;
+	padding: 0.5em;
+	background-color: #3c1a1a;
+}
+
+.dialog .dialog-title-panel
+{
+	flex-grow: 1;
+}
+
+.dialog .dialog-top-panel
+{
+	padding: 0.5em;
+	background-color: #0c4181;
+	color: ghostwhite;
+}
+
+.dialog.dialog-error .dialog-top-panel
+{
+	background-color: #672626;
+}
