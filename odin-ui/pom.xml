@@ -29,7 +29,11 @@
 
     <build>
         <sourceDirectory>src</sourceDirectory>
-        <resources><resource><directory>resources</directory></resource></resources>
+        <resources>
+            <resource>
+                <directory>war</directory>
+            </resource>
+        </resources>
         <testResources><testResource><directory>test-resources</directory></testResource></testResources>
         <plugins>
             <plugin>
@@ -39,8 +43,32 @@
                 <extensions>true</extensions>
                 <configuration>
                     <moduleName>odin.ui.odin_ui</moduleName>
+                    <moduleShortName>odin_ui</moduleShortName>
                     <logLevel>DEBUG</logLevel>
+                    <includes></includes>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/${project.build.finalName}</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>war</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
