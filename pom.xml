@@ -10,8 +10,6 @@
     <properties>
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <thor.version>0.0.1-SNAPSHOT</thor.version>
-        <loki.version>0.0.1-SNAPSHOT</loki.version>
     </properties>
 
     <modules>
@@ -22,36 +20,6 @@
          
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>au.gov.nla.thor</groupId>
-                <artifactId>thor-common</artifactId>
-                <version>{thor.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>au.gov.nla.thor</groupId>
-                <artifactId>thor-server</artifactId>
-                <version>{thor.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>au.gov.nla.loki</groupId>
-                <artifactId>loki-common</artifactId>
-                <version>{loki.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>au.gov.nla.loki</groupId>
-                <artifactId>loki-server</artifactId>
-                <version>{loki.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>au.gov.nla.loki</groupId>
-                <artifactId>loki-server-utils</artifactId>
-                <version>{loki.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>au.gov.nla.loki</groupId>
-                <artifactId>loki-ui</artifactId>
-                <version>{loki.version}</version>
-            </dependency>
             <dependency>
                 <groupId>org.gwtproject</groupId>
                 <artifactId>gwt</artifactId>

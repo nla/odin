@@ -5,7 +5,7 @@
     <parent>
         <groupId>au.gov.nla.odin</groupId>
         <artifactId>odin-parent</artifactId>
-        <version>${revision}</version>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>odin-server</artifactId>
 
@@ -13,12 +13,12 @@
         <dependency>
             <groupId>au.gov.nla.odin</groupId>
             <artifactId>odin-common</artifactId>
-            <version>${project.version}</version>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>au.gov.nla.odin</groupId>
+            <groupId>au.gov.nla.loki</groupId>
             <artifactId>loki-server</artifactId>
-            <version>${project.version}</version>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.maxmind.geoip2</groupId>
