@@ -11,13 +11,10 @@
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <thor.version>0.1.0-SNAPSHOT</thor.version>
+        <loki.version>0.1.0-SNAPSHOT</loki.version>
     </properties>
 
     <modules>
-        <module>loki-common</module>
-        <module>loki-server-util</module>
-        <module>loki-server</module>
-        <module>loki-ui</module>
         <module>odin-common</module>
         <module>odin-server</module>
         <module>odin-ui</module>
@@ -29,9 +26,31 @@
                 <groupId>au.gov.nla.thor</groupId>
                 <artifactId>thor-common</artifactId>
                 <version>{thor.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>au.gov.nla.thor</groupId>
                 <artifactId>thor-server</artifactId>
                 <version>{thor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>au.gov.nla.loki</groupId>
+                <artifactId>loki-common</artifactId>
+                <version>{loki.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>au.gov.nla.loki</groupId>
+                <artifactId>loki-server</artifactId>
+                <version>{loki.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>au.gov.nla.loki</groupId>
+                <artifactId>loki-server-utils</artifactId>
+                <version>{loki.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>au.gov.nla.loki</groupId>
+                <artifactId>loki-ui</artifactId>
+                <version>{loki.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.gwtproject</groupId>
@@ -42,4 +61,15 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+         
+    <distributionManagement>
+        <repository>
+            <id>nla-public-releases</id>
+            <url>https://dev.nla.gov.au/nexus/content/repositories/nla-public/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nla-public-snapshots</id>
+            <url>https://dev.nla.gov.au/nexus/content/repositories/nla-public-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
