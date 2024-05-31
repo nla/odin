@@ -5,13 +5,13 @@
     <groupId>au.gov.nla.odin</groupId>
     <artifactId>odin-parent</artifactId>
     <packaging>pom</packaging>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <thor.version>0.1.0-SNAPSHOT</thor.version>
-        <loki.version>0.1.0-SNAPSHOT</loki.version>
+        <thor.version>0.0.1-SNAPSHOT</thor.version>
+        <loki.version>0.0.1-SNAPSHOT</loki.version>
     </properties>
 
     <modules>
