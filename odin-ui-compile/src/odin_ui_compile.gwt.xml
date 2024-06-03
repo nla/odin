@@ -1,0 +1,11 @@
+<module rename-to='odin_ui'>
+  <inherits name='com.google.gwt.user.User'/>
+  <entry-point class='odin.ui.client.Entry'/>
+  
+  <source path='thor'/>
+  <source path='loki'/>
+  <source path='odin'/>
+  
+  
+  <add-linker name="xsiframe"/>
+</module>

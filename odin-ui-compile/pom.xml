@@ -23,6 +23,12 @@
             <classifier>sources</classifier>
         </dependency>
         <dependency>
+            <groupId>au.gov.nla.thor</groupId>
+            <artifactId>thor-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <classifier>sources</classifier>
+        </dependency>
+        <dependency>
             <groupId>au.gov.nla.odin</groupId>
             <artifactId>odin-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
@@ -73,7 +79,7 @@
               <plugin>
 		        <groupId>org.codehaus.mojo</groupId>
 		        <artifactId>gwt-maven-plugin</artifactId>
-		        <version>2.7.0</version>
+		        <version>2.10.0</version>
 		        <executions>
 		          <execution>
 		            <goals>
@@ -82,7 +88,7 @@
 		          </execution>
 		        </executions>
 		        <configuration>
-		          <module>odin.odin_ui</module>
+		          <module>odin_ui_compile</module>
 		        </configuration>
 		    </plugin>
 			<plugin>
