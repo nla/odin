@@ -8,13 +8,17 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>odin-ui</artifactId>
-    <packaging>gwt-app</packaging>
 
     <dependencies>
+		<dependency>
+            <groupId>au.gov.nla.loki</groupId>
+            <artifactId>loki-common</artifactId>
+            <version>0.0.2-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>au.gov.nla.loki</groupId>
             <artifactId>loki-ui</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.2-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>au.gov.nla.odin</groupId>
@@ -27,50 +31,29 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <sourceDirectory>src</sourceDirectory>
-        <resources>
-            <resource>
-                <directory>war</directory>
-            </resource>
-        </resources>
-        <testResources><testResource><directory>test-resources</directory></testResource></testResources>
-        <plugins>
-            <plugin>
-                <groupId>net.ltgt.gwt.maven</groupId>
-                <artifactId>gwt-maven-plugin</artifactId>
-                <version>1.1.0</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <moduleName>odin.ui.odin_ui</moduleName>
-                    <moduleShortName>odin_ui</moduleShortName>
-                    <logLevel>DEBUG</logLevel>
-                    <includes></includes>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.3.1</version>
-                <executions>
-                    <execution>
-                        <id>copy-resources</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}/${project.build.finalName}</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>war</directory>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+     <build>
+		<plugins>
+		 <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-source-plugin</artifactId>
+			<version>3.3.1</version>
+				<executions>
+					<execution>
+						<id>attach-source</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+						<configuration>
+							<includes>
+								<include>**/*.java</include>
+								<include>**/*.gwt.xml</include>
+							</includes>
+						</configuration>
+					</execution>
+				</executions>
+		 </plugin>
+		</plugins>
+	 </build>
 
 </project>
