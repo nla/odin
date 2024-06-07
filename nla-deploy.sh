@@ -6,7 +6,7 @@ cp -R odin-server/config/ "$1"/config/
 unzip -d "$1"/content odin-ui/target/*.war
 
 mkdir "$1"/content/root/
-mv "$1"/content/index.html "$"/content/root/index.html
+mv "$1"/content/index.html "$1"/content/root/index.html
 
 # FIXME: make the app look at environment variables
 sed -i 's/^\(loki.http.request.adapter.port = \).*/\1'"$PORT/" "$1"/config/http_adapter.properties
