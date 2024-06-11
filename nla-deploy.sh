@@ -1,6 +1,6 @@
 #!/bin/bash
 mvn -v
-javac -v
+javac -version
 echo $JAVA_HOME
 mvn package dependency:copy-dependencies
 mkdir "$1"/{lib,content}
