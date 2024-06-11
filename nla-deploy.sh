@@ -1,4 +1,7 @@
 #!/bin/bash
+mvn -v
+javac -v
+echo $JAVA_HOME
 mvn package dependency:copy-dependencies
 mkdir "$1"/{lib,content}
 cp odin-server/target/*.jar odin-server/target/dependency/* "$1"/lib
