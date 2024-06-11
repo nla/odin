@@ -9,6 +9,7 @@ mkdir "$1"/content/root/
 
 cp odin-server/target/*.jar odin-server/target/dependency/* "$1"/lib
 cp -R odin-server/config/ "$1"/config/
+cp -R odin-server/documents/ "$1"/documents/
 cp -R odin-ui/war/* "$1"/content/
 cp odin-ui-compile/target/odin-ui-*/odin_ui/* "$1"/content/odin_ui/
 mv "$1"/content/index.html "$1"/content/root/index.html
