@@ -7,10 +7,10 @@
         <artifactId>odin-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>odin-ui</artifactId>
+    <artifactId>odin-ui-compile</artifactId>
 
     <dependencies>
-		<dependency>
+	<dependency>
             <groupId>au.gov.nla.loki</groupId>
             <artifactId>loki-common</artifactId>
             <version>0.0.2-SNAPSHOT</version>
@@ -54,29 +54,29 @@
             </resource>
         </resources>
         <testResources><testResource><directory>test-resources</directory></testResource></testResources>
-        <plugins>
-			  <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.3.0</version>
-				<executions>
-				  <execution>
-					<id>unpack-source-jars</id>
-					<phase>generate-sources</phase>
-					<goals>
-					  <goal>unpack-dependencies</goal>
-					</goals>
-					<configuration>
-					  <includeClassifiers>sources</includeClassifiers>
-					  <outputDirectory>${basedir}/src/</outputDirectory>
-					  <overWriteReleases>false</overWriteReleases>
-					  <overWriteSnapshots>true</overWriteSnapshots>
-					  <overWriteIfNewer>true</overWriteIfNewer>
-					</configuration>
-				  </execution>
-				</executions>
-			  </plugin>
-              <plugin>
+	<plugins>
+		  <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-dependency-plugin</artifactId>
+			<version>3.3.0</version>
+			<executions>
+			  <execution>
+				<id>unpack-source-jars</id>
+				<phase>generate-sources</phase>
+				<goals>
+				  <goal>unpack-dependencies</goal>
+				</goals>
+				<configuration>
+				  <includeClassifiers>sources</includeClassifiers>
+				  <outputDirectory>${basedir}/src/</outputDirectory>
+				  <overWriteReleases>false</overWriteReleases>
+				  <overWriteSnapshots>true</overWriteSnapshots>
+				  <overWriteIfNewer>true</overWriteIfNewer>
+				</configuration>
+			  </execution>
+			</executions>
+		  </plugin>
+              	  <plugin>
 		        <groupId>org.codehaus.mojo</groupId>
 		        <artifactId>gwt-maven-plugin</artifactId>
 		        <version>2.10.0</version>
@@ -111,8 +111,8 @@
                             </resources>
                         </configuration>
                     </execution>
-		        </executions>
-		      </plugin>
+		</executions>
+	    </plugin>
         </plugins>
     </build>
 
