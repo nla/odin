@@ -16,12 +16,12 @@
         <dependency>
             <groupId>au.gov.nla.thor</groupId>
             <artifactId>thor-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.2-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>au.gov.nla.loki</groupId>
             <artifactId>loki-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.2-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
