@@ -1,7 +1,5 @@
 #!/bin/bash
-mvn -v
-javac -version
-echo $JAVA_HOME
+JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.21.0.9-2.el8.x86_64/
 mvn package dependency:copy-dependencies
 mkdir "$1"/{lib,content}
 cp odin-server/target/*.jar odin-server/target/dependency/* "$1"/lib
