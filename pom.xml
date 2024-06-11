@@ -16,6 +16,7 @@
     <modules>
         <module>odin-common</module>
         <module>odin-server</module>
+        <module>odin-ui</module>
         <module>odin-ui-compile</module>
     </modules>
          
