@@ -2,7 +2,11 @@
 JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 mvn package dependency:copy-dependencies
 
-mkdir "$1"/{lib,content,content/odin_ui, content/root}
+mkdir "$1"/lib/
+mkdir "$1"/content/
+mkdir "$1"/content/odin_ui/
+mkdir "$1"/content/root/
+
 cp odin-server/target/*.jar odin-server/target/dependency/* "$1"/lib
 cp -R odin-server/config/ "$1"/config/
 cp -R odin-ui/war/* "$1"/content/
