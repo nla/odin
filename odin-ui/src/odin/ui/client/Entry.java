@@ -50,7 +50,7 @@ public class Entry implements EntryPoint
         ErrorHandler errorHandler = new ErrorHandler(){
             public void handleError(Throwable e)
             {
-                UIUtils.log(e.getMessage(), e);
+                UIUtils.log(e);
 
                 Dialog dialog = new Dialog("dialog-error");
                 dialog.setTitle(FlexFlow.create().directionRight().justifyStart().with(new FontIcon("fas fa-triangle-exclamation"), Spacer.wide("0.5em"), new Label("Hold on")));
