@@ -4,7 +4,7 @@ mvn package dependency:copy-dependencies
 mkdir "$1"/{lib,content}
 cp odin-server/target/*.jar odin-server/target/dependency/* "$1"/lib
 cp -R odin-server/config/ "$1"/config/
-cp -R odin-ui/war/ "$1"/content/
+cp -R odin-ui/war/* "$1"/content/
 
 mkdir "$1"/content/root/
 mv "$1"/content/index.html "$1"/content/root/index.html
