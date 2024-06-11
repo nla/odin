@@ -1,0 +1,9 @@
+.com.au
+.net.au
+.org.au
+.asn.au
+.id.au
+.edu.au
+.gov.au
+.csiro.au
+.au
