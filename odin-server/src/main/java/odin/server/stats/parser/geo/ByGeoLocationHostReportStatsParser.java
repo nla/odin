@@ -42,13 +42,8 @@ public class ByGeoLocationHostReportStatsParser implements HostReportStatsParser
         threadPoolCount = Integer.parseInt(ServerUtils.loadFromFile("config/geolocation.properties").get("geolocation_host_reporter_thread_pool", "5"));
     }
     
-    int counter = 0;
-    int totalCounter = 0;
-    
     public DomainStats parseStats(String reportPath) throws Exception
     {
-        counter = 0;
-        totalCounter = 0;
         ExecutorService executorService = Executors.newFixedThreadPool(threadPoolCount);
         
         DomainStats stats = new DomainStats();
@@ -205,15 +200,6 @@ public class ByGeoLocationHostReportStatsParser implements HostReportStatsParser
                            catch(Exception e)
                            {
                                e.printStackTrace();
-                           }
-                           
-                           totalCounter++;
-                           counter++;
-                           
-                           if(counter>=1000) 
-                           {
-                               counter = 0;
-                               System.out.println(reportPath+": "+totalCounter);
                            }
                        }
                     });
