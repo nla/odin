@@ -14,7 +14,7 @@ import odin.request.DataServiceAsync;
 
 public class UIClientContext extends ClientContext
 {
-    private static final boolean DEV = true;
+    private static final boolean DEV = false;
     private static final String BACKEND_HOST = DEV ? "http://localhost:2901" : "http://spade.nla.gov.au:2901";
 
     private final DataServiceAsync dataService = createServiceTarget(GWT.create(DataService.class), BACKEND_HOST + "/data");
