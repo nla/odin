@@ -468,16 +468,6 @@ public class StatsScreen extends UIScreen
                 Button button = new Button("option center "+(category.getKey().equals(currentCategory)?"selected":""), new Label(category.getValue()), new Runnable(){
                     public void run()
                     {
-                        // Temporarily disable the 'BY ESTIMATED LOCATION' button until implemented
-                        
-                        if(category.getKey().equals(DomainStatsConstants.STATS_VIEW_CATEGORY__BY_GEOLOCATION))
-                        {
-                            context.getErrorHandler().handleError(new Exception("Not yet implemented."));
-                            return;
-                        }
-                        
-                        //
-                        
                         currentCategory = category.getKey();
                         hiddenCategories.clear();
                         refreshData();
