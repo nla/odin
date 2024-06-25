@@ -1,7 +1,6 @@
 package odin.ui.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import loki.ErrorHandler;
 import loki.ui.Document;
