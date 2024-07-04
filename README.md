@@ -12,8 +12,8 @@ Adding statistics data
 
 To add the statistics data for a new WDH harvest:
 
-1. Copy the hosts-report.txt file into <odin_data_directory>/source_data/harvest_host_reports/ and rename it <yyyy>_<MM>.txt based on the year and month of the harvest (for example 2024_07.text).
-2. Copy the mimetype-report.txt file into <odin_data_directory>/source_data/harvest_mime_reports/ and rename it <yyyy>_<MM>.txt based on the year and month of the harvest (for example 2024_07.text).
+1. Copy the hosts-report.txt file into <odin_data_directory>/source_data/harvest_host_reports/ and rename it yyyy_MM.txt based on the year and month of the harvest (for example 2024_07.text).
+2. Copy the mimetype-report.txt file into <odin_data_directory>/source_data/harvest_mime_reports/ and rename it yyyy_MM.txt based on the year and month of the harvest (for example 2024_07.text).
 3. Refresh the web page to view the new data. The first time the new data is loaded, it will be parsed from the report files and cached as statistics data, so it may take a minute to load. After successfully loading the first time, loading will be almost instantaneous. Note: geolocation parsing may take several minutes.
 
 
