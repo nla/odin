@@ -1,7 +1,7 @@
 ODIN
 ====
 
-A web application that parses statistics data from Heritrix crawl reports and displays them in a charts.
+A web application that parses statistics data from Heritrix crawl reports and displays them in charts.
 Built using a GWT-based paradigm as a proof of concept.
 
 Intended for use by the NLA web archiving team only.
